@@ -1,0 +1,25 @@
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="list_element">
+            <div class="check-box-el"><p>Is Done</p></div>
+            <div class="check-box-el"><p>Delete?</p></div>
+            <div><p>Name</p></div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="list_element add-btn">
+            <div class="check-box-el add-btn btn btn-primary" ng-click="addTodoElement()">
+                <p>Add New ToDo</p>
+            </div>
+        </div>
+    </li>
+    <div class="todo_list">
+        <li class="list-group-item" ng-repeat="el in list">
+            <div class="list_element">
+                <div class="check-box-el"><input type="checkbox" ng-model="el.isDone" ng-checked="getBoolean(el.isDone)"/></div>
+                <div class="check-box-el" ng-click="deleteTodoElement()"><i class="fa fa-trash"></i></div>
+                <div>{{el.name}}</div>
+            </div>
+        </li>
+    </div>
+</ul>
